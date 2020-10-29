@@ -137,7 +137,10 @@ def print_grouping(
     """
     for group in grouping:
         print(" ".join(group))
-        print(", ".join(email_to_names[email] for email in group))
+        names = [email_to_names[email] for email in group]
+        # Print out names in the format of an email greeting.
+        greeting = "Hi " + (", ".join(names[:-1])) + ", and " + names[-1] + ","
+        print(greeting)
         print()
 
     with open(output_filename, "w") as output_file:
