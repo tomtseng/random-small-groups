@@ -1,5 +1,7 @@
 *.swp
 *.swo
 
+.pytype
+
 names.txt
 past-groups/
